@@ -1,0 +1,58 @@
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local development settings
+*.env
+*.env.*
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore system log files
+*.log
+
+# Ignore package files
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Ignore virtual environment folders
+venv/
+env/
+env.bak/
+
+# Ignore coverage reports
+.coverage
+htmlcov/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore generated documentation
+docs/_build/
+
+# Ignore cache and temporary files
+*.cache
+*.tmp
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+*.pydevproject
+*.project
+*.settings/
+*.tmproj
+*.sublime-workspace
+*.sublime-project
+*.komodoproject
+*.komodotools
+
+# Ignore development-specific files
+*.bak
+*.swp
+*.~lock.*
