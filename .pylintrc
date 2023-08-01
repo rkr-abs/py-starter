@@ -1,0 +1,12 @@
+[MASTER]
+ignore = .git, __pycache__
+
+[pylint]
+
+disable=missing-docstring, invalid-name
+
+max-line-length=80
+
+enable=import-error, too-many-locals
+
+output-format=colorized
