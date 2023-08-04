@@ -1,0 +1,6 @@
+#!/bin/bash
+
+python_files=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.py$')
+[ -z "$python_files" ] && exit 0
+
+pylint $python_files
