@@ -1,6 +1,16 @@
 #!/bin/bash
 
 python_files=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.py$')
-[ -z "$python_files" ] && exit 0
+
+if [ -z "$python_files" ]; then
+  echo "No Python files staged for commit. Skipping pylint check."
+  exit 0
+fi
+
+# Check if pylint is installed
+if ! command -v pylint &> /dev/null; then
+  echo "Error: pylint is not installed. Please install pylint to proceed."
+  exit 1
+fi
 
 pylint $python_files
